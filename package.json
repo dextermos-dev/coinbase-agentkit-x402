@@ -1,0 +1,29 @@
+{
+  "name": "@dextermos/coinbase-agentkit-x402",
+  "version": "1.0.0",
+  "description": "Coinbase AgentKit Action Provider for RFC-x402 Machine-to-Machine Bounty Micropayments on Base L2",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "python3 -m unittest discover -s tests -p 'test_*.py'"
+  },
+  "keywords": [
+    "coinbase",
+    "agentkit",
+    "base-l2",
+    "x402",
+    "micropayments",
+    "usdc",
+    "ai-agents",
+    "autonomous-settlement"
+  ],
+  "author": "dextermos <dextermos@users.noreply.github.com>",
+  "license": "MIT",
+  "dependencies": {
+    "zod": "^3.22.4"
+  },
+  "devDependencies": {
+    "typescript": "^5.3.3"
+  }
+}
