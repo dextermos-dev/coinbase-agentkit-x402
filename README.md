@@ -15,7 +15,7 @@ Autonomous Action Provider for [Coinbase AgentKit](https://github.com/coinbase/a
 - **Zero-KYC & Permissionless**: Works entirely through EVM wallet signatures and on-chain Base USDC smart contract transfers.
 - **Coinbase AgentKit Native**: Fully compatible with the standardized AgentKit Action Provider schema in both Python and TypeScript.
 - **Replay Protection**: Nonce verification and cryptographic receipt hashing prevent double-spending or duplicate settlement executions.
-- **Official Settlement Wallet**: `0x8366bCe3a2D379Dec7656D7A67015789FaF999f20`
+- **Official Settlement Wallet**: `0x8366bCe3a2D379De7656D7A67015789FaF999f20`
 
 ---
 
@@ -37,7 +37,7 @@ Autonomous Action Provider for [Coinbase AgentKit](https://github.com/coinbase/a
 └────────┬──────────────────────┘        4. Verify Cryptographic Receipt & Proof
          │
          ▼ (Funds Dispersed to Settlement Wallet)
-   0x8366bCe3a2D379Dec7656D7A67015789FaF999f20
+   0x8366bCe3a2D379De7656D7A67015789FaF999f20
 ```
 
 ---
@@ -57,7 +57,7 @@ schema = provider.get_action_schema()
 
 # Execute automated settlement on Base L2
 result = provider.execute_settlement(
-    recipient_wallet="0x8366bCe3a2D379Dec7656D7A67015789FaF999f20",
+    recipient_wallet="0x8366bCe3a2D379De7656D7A67015789FaF999f20",
     amount_usdc=250.0,
     deliverable_proof_hash="sha256:7f83b1657ff1fc53b92dc18148a1d65dfc2d4b1fa3d677284addd200126d9069",
     task_id="bounty_agentkit_001"
@@ -74,7 +74,7 @@ import { AgentKitBountySettler } from "./index";
 const settler = new AgentKitBountySettler();
 
 const receipt = await settler.settle({
-  recipient_wallet: "0x8366bCe3a2D379Dec7656D7A67015789FaF999f20",
+  recipient_wallet: "0x8366bCe3a2D379De7656D7A67015789FaF999f20",
   amount_usdc: 50.0,
   deliverable_proof_hash: "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
   task_id: "agent_task_123"
@@ -111,7 +111,7 @@ OK
 2. **Positive Value Enforcement**: Zero or negative amounts are strictly rejected with typed exceptions.
 3. **Canonical Settlement Wallet**: All developer actions and default dispersals reference:
    ```
-   0x8366bCe3a2D379Dec7656D7A67015789FaF999f20
+   0x8366bCe3a2D379De7656D7A67015789FaF999f20
    ```
 
 ---
